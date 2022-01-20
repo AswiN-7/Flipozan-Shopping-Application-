@@ -1,13 +1,13 @@
 # Flipozan-Shopping-Application
 
-										 FLIPoZON:
-                      _ _
-                        /
-                      _/_
+									    FLIPoZON
+                      							  _ _
+                       							    /
+                      							  _/_
 
 LANGUAGE :  ENGLISH
 
-                  INSTRUCTION MANUAL
+                  						INSTRUCTION MANUAL
 
 DO
 
