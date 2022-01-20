@@ -16,7 +16,7 @@ class Productmain
 		JFrame frame = new JFrame("FLIPoZON");  
         	JPanel panel = new JPanel();  
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		ImageIcon icon=new ImageIcon("01.jpg");
+		ImageIcon icon=new ImageIcon("assets/01.jpg");
 		JLabel label = new JLabel(icon);
 		panel.add(label);
 		frame.add(panel);
@@ -35,7 +35,7 @@ class Productmain
 					Random rand1 = new Random();      
       					id=rand1.nextInt(11);
 					System.out.println("YOUR ID NUMBER IS "+id);
-					filename=id+".txt";
+					filename="users/"+id+".txt";
 					Account e1 = new  Account(name,id,filename);
 					e1.storeObject(e1);
 					e1.displayObjects();					
@@ -44,7 +44,7 @@ class Productmain
 			{	
 				System.out.print("ENTER login id :");
 				id=input.nextInt();
-				filename=id+".txt";
+				filename="users/"+id+".txt";
 				Account.find(filename);
 			}
 		String[] barray={"wings_of_fire","core_java","python","c_fundamendals","staring_how_we_look"};
@@ -67,11 +67,17 @@ class Productmain
 				System.out.println("\n\n[enter correct choice]\n\n");
 			}
 			while(true)
-			{
-				System.out.print("enter name product : ");
-					user_inp=input.next();
+			{	
 				if(user_type==1)
-				{
+				{	
+
+					System.out.println("Available Books : ");
+					for(int i=0;i<barray.length;i++){
+						System.out.println("	"+barray[i]);
+					}
+					System.out.print("enter name product : ");
+						user_inp=input.next();
+
 					for(int i=0;i<barray.length;i++)
 					{
 						if(barray[i].equals(user_inp))
@@ -99,6 +105,12 @@ class Productmain
 				}
 				else if(user_type==2)
 				{
+					System.out.println("Available Shampoos : ");
+					for(int i=0;i<barray.length;i++){
+						System.out.println("	"+sarray[i]);
+					}
+					System.out.print("enter name product : ");
+					user_inp=input.next();
 					for(int i=0;i<sarray.length;i++)
 					{
 						if(sarray[i].equals(user_inp))
@@ -125,6 +137,12 @@ class Productmain
 				}
 				if(user_type==3)
 				{
+					System.out.println("Available Milks : ");
+					for(int i=0;i<barray.length;i++){
+						System.out.println("	"+marray[i]);
+					}
+					System.out.print("enter name product : ");
+					user_inp=input.next();
 					for(int i=0;i<marray.length;i++)
 					{
 						if(marray[i].equals(user_inp))
@@ -188,7 +206,7 @@ class Productmain
 		JFrame framep = new JFrame(" LUCKY PRIZE.....");  
         	JPanel panelp = new JPanel();  
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		ImageIcon iconp=new ImageIcon("prize.jpg");
+		ImageIcon iconp=new ImageIcon("assets/prize.jpg");
 		JLabel labelp= new JLabel(iconp);
 		panelp.add(labelp);
 		framep.add(panelp);
@@ -205,7 +223,7 @@ class Productmain
 				JFrame frame11 = new JFrame("BETTER LUCK NEXT TIME.....");  
         			JPanel panel11 = new JPanel();  
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				ImageIcon icon11=new ImageIcon("next.jpg");
+				ImageIcon icon11=new ImageIcon("assets/next.jpg");
 				JLabel label11 = new JLabel(icon11);
 				panel11.add(label11);
 				frame11.add(panel11);
@@ -221,7 +239,7 @@ class Productmain
 				JFrame frame1 = new JFrame("COCONUT OIL");  
         			JPanel panel1 = new JPanel();  
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				ImageIcon icon1=new ImageIcon("free1.jpg");
+				ImageIcon icon1=new ImageIcon("assets/free1.jpg");
 				JLabel label1 = new JLabel(icon1);
 				panel1.add(label1);
 				frame1.add(panel1);
@@ -234,7 +252,7 @@ class Productmain
 				JFrame frame2 = new JFrame("FANTA");  
         			JPanel panel2 = new JPanel();  
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				ImageIcon icon2=new ImageIcon("free2.jpg");
+				ImageIcon icon2=new ImageIcon("assets/free2.jpg");
 				JLabel label2 = new JLabel(icon2);
 				panel2.add(label2);
 				frame2.add(panel2);
@@ -247,7 +265,7 @@ class Productmain
 				JFrame frame3 = new JFrame("CREME BETWEENS");  
         			JPanel panel3 = new JPanel();  
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				ImageIcon icon3=new ImageIcon("free3.jpg");
+				ImageIcon icon3=new ImageIcon("assets/free3.jpg");
 				JLabel label3 = new JLabel(icon3);
 				panel3.add(label3);
 				frame3.add(panel3);
@@ -260,7 +278,7 @@ class Productmain
 				JFrame frame4 = new JFrame("COLA");  
         			JPanel panel4 = new JPanel();  
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				ImageIcon icon4=new ImageIcon("free4.jpg");
+				ImageIcon icon4=new ImageIcon("assets/free4.jpg");
 				JLabel label4 = new JLabel(icon4);
 				panel4.add(label4);
 				frame4.add(panel4);
@@ -273,7 +291,7 @@ class Productmain
 				JFrame frame5 = new JFrame("AIRA");  
         			JPanel panel5 = new JPanel();  
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				ImageIcon icon5=new ImageIcon("free5.jpg");
+				ImageIcon icon5=new ImageIcon("assets/free5.jpg");
 				JLabel label5 = new JLabel(icon5);
 				panel5.add(label5);
 				frame5.add(panel5);
@@ -286,7 +304,7 @@ class Productmain
 				JFrame frame6 = new JFrame("M&Ms");  
         			JPanel panel6 = new JPanel();  
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				ImageIcon icon6=new ImageIcon("free6.jpg");
+				ImageIcon icon6=new ImageIcon("assets/free6.jpg");
 				JLabel label6 = new JLabel(icon6);
 				panel6.add(label6);
 				frame6.add(panel6);
@@ -300,7 +318,7 @@ class Productmain
 				JFrame frame7 = new JFrame("NUTRI CHOICE");  
         			JPanel panel7 = new JPanel();  
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				ImageIcon icon7=new ImageIcon("free7.jpg");
+				ImageIcon icon7=new ImageIcon("assets/free7.jpg");
 				JLabel label7 = new JLabel(icon7);
 				panel7.add(label7);
 				frame7.add(panel7);
@@ -313,7 +331,7 @@ class Productmain
 				JFrame frame8 = new JFrame("ALL OUT");  
         			JPanel panel8 = new JPanel();  
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				ImageIcon icon8=new ImageIcon("free8.jpg");
+				ImageIcon icon8=new ImageIcon("assets/free8.jpg");
 				JLabel label8 = new JLabel(icon8);
 				panel8.add(label8);
 				frame8.add(panel8);
@@ -326,7 +344,7 @@ class Productmain
 				JFrame frame9= new JFrame("ICE CREAM");  
         			JPanel panel9 = new JPanel();  
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				ImageIcon icon9=new ImageIcon("free9.jpg");
+				ImageIcon icon9=new ImageIcon("assets/free9.jpg");
 				JLabel label9 = new JLabel(icon9);
 				panel9.add(label9);
 				frame9.add(panel9);
@@ -339,7 +357,7 @@ class Productmain
 				JFrame frame10= new JFrame("LAYS");  
         			JPanel panel10= new JPanel();  
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				ImageIcon icon10=new ImageIcon("free10.jpg");
+				ImageIcon icon10=new ImageIcon("assets/free10.jpg");
 				JLabel label10 = new JLabel(icon10);
 				panel10.add(label10);
 				frame10.add(panel10);
@@ -353,7 +371,7 @@ class Productmain
 				JFrame frame101= new JFrame("C");  
         			JPanel panel101= new JPanel();  
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				ImageIcon icon101=new ImageIcon("end.jpg");
+				ImageIcon icon101=new ImageIcon("assets/end.jpg");
 				JLabel label101 = new JLabel(icon101);
 				panel101.add(label101);
 				frame101.add(panel101);
